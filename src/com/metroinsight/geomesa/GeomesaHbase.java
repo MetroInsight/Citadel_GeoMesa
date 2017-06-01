@@ -1,4 +1,4 @@
-package com.metroinsight.geomesa;
+package com.metroInsight.geomesa;
 
 import com.beust.jcommander.internal.Lists;
 import com.google.common.base.Joiner;
@@ -267,8 +267,8 @@ public class GeomesaHbase {
         // (first creating the table if it does not already exist); you only need
         // to create the FeatureType schema the *first* time you write any Features
         // of this type to the table
-        //System.out.println("Creating feature-type (schema):  " + simpleFeatureTypeName);
-        //dataStore.createSchema(simpleFeatureType);
+        System.out.println("Creating feature-type (schema):  " + simpleFeatureTypeName);
+        dataStore.createSchema(simpleFeatureType);
 
         // create new features locally, and add them to this table
         System.out.println("Creating new features");

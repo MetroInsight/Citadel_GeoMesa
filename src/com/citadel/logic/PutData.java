@@ -1,3 +1,4 @@
+package com.citadel.logic;
 
 
 import java.io.BufferedReader;
@@ -13,9 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
-import com.example.kafka.kafkaProducer;
-import com.metroinsight.geomesa.GeomesaHbase;
-import com.metroinsight.geomesa.GeomesaHbase;
+import com.metroInsight.geomesa.GeomesaHbase;
+
 
 /**
  * Servlet implementation class PutData
@@ -49,6 +49,7 @@ public class PutData extends HttpServlet {
         GeomesaHbase gmh=new GeomesaHbase();
         JSONArray res=gmh.Query();
         
+        if(res != null)
         writer.println("<p>Data is as below:<br> " +res.toJSONString()+ "<p>");
         
         System.out.println("Done");
